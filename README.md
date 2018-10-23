@@ -1,2 +1,2 @@
-# java
-Java Examples
+# Java
+This repo contains some examples of Java.
