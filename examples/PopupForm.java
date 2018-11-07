@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yashtmlunit;
+package com.yasglobal.popupformsubmission;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -19,21 +19,22 @@ import java.io.IOException;
  *
  * @author sami
  */
-public class PopupFormSubmission {
+public class PopupForm {
 
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws FailingHttpStatusCodeException, IOException {
-        homePageForm();
+        PopupForm popupForm = new PopupForm();
+        popupForm.homePageForm();
     }
     
     /*
      * This function using the WebClient and to get the Page and then 
      * open the popup form using the button click.
      */
-    public static void homePageForm() throws IOException {
+    public void homePageForm() throws IOException {
         try (final WebClient webClient = new WebClient(BrowserVersion.BEST_SUPPORTED)) {
             webClient.getOptions().setThrowExceptionOnScriptError(false);
             final HtmlPage page = webClient.getPage("http://example.com/");
